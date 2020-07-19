@@ -1,0 +1,27 @@
+Grasshopper has lost responsiveness for more than 1 minute.
+An emergency save has been made.
+Problem might be caused by GH_TaskCapableComponent`1 in Grasshopper, Version=6.14.19118.15561, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803.
+
+A stack trace report is attached for diagnosis: 
+
+   at System.Threading.SynchronizationContext.WaitHelper(IntPtr[] waitHandles, Boolean waitAll, Int32 millisecondsTimeout)
+   at System.Windows.Threading.DispatcherSynchronizationContext.Wait(IntPtr[] waitHandles, Boolean waitAll, Int32 millisecondsTimeout)
+   at System.Threading.Monitor.ObjWait(Boolean exitContext, Int32 millisecondsTimeout, Object obj)
+   at System.Threading.ManualResetEventSlim.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.SpinThenBlockingWait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.InternalWait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Grasshopper.Kernel.GH_TaskCapableComponent`1.GetSolveResults(IGH_DataAccess access, T& data)
+   at CurveComponents.Component_ProjectCurve.SolveInstance(IGH_DataAccess DA)
+   at Grasshopper.Kernel.GH_Component.Solution_Compute_MixedAccess(GH_StructureIterator it)
+   at Grasshopper.Kernel.GH_Component.ComputeData()
+   at Grasshopper.Kernel.GH_Document.SolveAllObjects(GH_SolutionMode mode)
+   at Grasshopper.Kernel.GH_Document.NewSolution(Boolean expireAllObjects, GH_SolutionMode mode)
+   at Grasshopper.GUI.Canvas.Interaction.GH_WireInteraction.RespondToMouseUp(GH_Canvas sender, GH_CanvasMouseEvent e)
+   at Grasshopper.GUI.Canvas.GH_Canvas.MouseUp_Interaction(GH_CanvasMouseEvent e)
+   at Grasshopper.GUI.Canvas.GH_Canvas.Canvas_MouseUp(Object sender, MouseEventArgs e)
+   at System.Windows.Forms.MouseEventHandler.Invoke(Object sender, MouseEventArgs e)
+   at System.Windows.Forms.Control.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
