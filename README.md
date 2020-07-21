@@ -38,24 +38,22 @@ In order to actually extrude thermoplastics you will of course also need:
 
 
 ## Method overview: 
-2D shape generation with a randomized algorithm:
+2D shape generation with a randomized algorithm:  
 ![2D shape generation by randomization](https://media.giphy.com/media/ZDFOcmuQBokXXDcpuF/giphy.gif)
 
-Projecting the generated shape onto the 3D base form: 
+Projecting the generated shape onto the 3D base form:   
 ![projecting the 3D shape to the 3D sphere](https://media.giphy.com/media/W4XHigYEZNN6xbh7s5/giphy.gif)
 
-Optimising the extrusion angle onto the base form (this is currently done manually):
+Optimising the extrusion angle onto the base form (this is currently done manually):  
 ![6D orientation robot](https://media.giphy.com/media/d8LBkWQdMqfxGP67hf/giphy.gif)
 
-Simulating the extrusion process:
+Simulating the extrusion process:  
 ![robot simulation](https://media.giphy.com/media/Vi0BAiefmNuPssO3cX/giphy.gif)
 
 
 
-Extrude:
-
-
-
+Extrude:  
+![robotic extrusion](https://media.giphy.com/media/j3zHDjf85XNVVQvBMN/giphy-downsized-large.gif)
 
 
 ## Current shortcomings of the method:
