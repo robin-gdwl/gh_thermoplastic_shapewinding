@@ -2,7 +2,11 @@
 
 # Robotic Thermoplastic Shape-Winding
 
-[TOC]
+- [Robotic Thermoplastic Shape-Winding](#robotic-thermoplastic-shape-winding)
+  * [Installation and requirements](#installation-and-requirements)
+  * [Method overview:](#method-overview-)
+  * [Current shortcomings of the method:](#current-shortcomings-of-the-method-)
+  * [License](#license)
 
 **Thermoplastic shape-winding** is a method of creating 3D objects by extruding thermoplastic onto a base form wich is moved by a 6-axis robot. 
 The project aimed to find ways of quickly generating threedimensional structures without the need for layer by layer extrusion. 
