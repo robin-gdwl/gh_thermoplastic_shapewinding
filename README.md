@@ -3,7 +3,8 @@
 # Robotic Thermoplastic Shape-Winding
 
 - [Robotic Thermoplastic Shape-Winding](#robotic-thermoplastic-shape-winding)
-  * [Installation and requirements](#installation-and-requirements)
+  * [Requirements](#requirements)
+  * [Installation](#installation)
   * [Method overview:](#method-overview-)
   * [Current shortcomings of the method:](#current-shortcomings-of-the-method-)
   * [License](#license)
@@ -16,7 +17,7 @@ click the image below for a [video demonstration](http://www.youtube.com/watch?v
 
 
 
-## Installation and requirements 
+## Requirements 
 
 - [**Rhino 6**](https://www.rhino3d.com/6) (tested in Rhino 6 for Windows)
 - [**Grasshopper**](https://www.rhino3d.com/6/new/grasshopper)(included in Rhino 6)
@@ -29,17 +30,16 @@ click the image below for a [video demonstration](http://www.youtube.com/watch?v
 
 
 
-In order to actually extrude thermoplastics you will of course also need: 
+In order to *actually extrude thermoplastics* you will of course also need: 
 
 - [**Universal Robot UR5**](https://www.universal-robots.com/products/ur5-robot/) or any industrial robot supported in [visose/robots](https://github.com/visose/Robots/wiki/Robot-libraries) (tested on a UR5 CB)
 - **Thermoplastic extruder**
   - a common 3D-printing hotend could be enough for small-scale tests
   - the extruder used here is adapted from the [precious-plastic extruder](https://community.preciousplastic.com/academy/build/extrusion)
 
+## Installation
 
-
-
-
+simply clone or [download](https://github.com/robin-gdwl/gh_thermoplastic_shapewinding/archive/master.zip) the project folder and open one of the files in the "Grasshopper_definitions"- folder
 
 ## Method overview: 
 2D shape generation with a randomized algorithm:  
@@ -54,10 +54,8 @@ Optimising the extrusion angle onto the base form (this is currently done manual
 Simulating the extrusion process:  
 ![robot simulation](https://media.giphy.com/media/Vi0BAiefmNuPssO3cX/giphy.gif)
 
-
-
 Extrude:  
-![robotic extrusion](https://media.giphy.com/media/j3zHDjf85XNVVQvBMN/giphy-downsized-large.gif)
+![robotic extrusion irl](https://media.giphy.com/media/duAErpQRKUdqWaoWIk/giphy-downsized-large.gif)
 
 
 ## Current shortcomings of the method:
@@ -66,6 +64,14 @@ Extrude:
 2. The [non-spherical wrist of a Universal-Robot](https://www.researchgate.net/profile/Khaled_Elashry2/publication/300721200/figure/fig2/AS:469636585136131@1488981495794/Difference-between-spherical-and-non-spherical-wrist-robots_W640.jpg) causes considerable speed constraints when performing certain movements. A robot with a spherical wrist would have less of these constraints
    **As the speed of the robot is currently not linked to the extrusion speed** this severely impacts the uniformity of the resulting extrusion line. This can be seen [in this video](https://youtu.be/IVRG1TSqpIU).
 3. No automated collision avoidance is implemented as of yet
+
+Apart from the current **shortcomings of the method itself** the following aspects were challenging during the time of developing the project and contributed to the limited scope of the results: 
+
+1. Unreliable extrusion: The extrusion was unreliable due the motor controller limiting the current of the extruder motor under high load as well as the recycled, shredded material not flowing well into the extrusion chamber. A different combination of motor and controller as well an improved funnel geometry for material flow should solve these problems. 
+
+![extrusion_unit](images_and_animations/extrusion_unit_downsampled.jpeg)  
+
+![material_quality](images_and_animations/material_quality_downsampled.jpeg)
 
 ## License 
 The code and documentation (text and images) are licensed under the [MIT-License](https://github.com/robin-gdwl/gh_thermoplastic_shapewinding/blob/master/LICENSE)
